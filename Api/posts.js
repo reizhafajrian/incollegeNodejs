@@ -4,14 +4,14 @@ const express = require("express");
 const router = express.Router();
 
 const Post = require("../Post")
-router.get('/', async(req, res) => {
-    try {
-        const getPost = await Post.find()
-        res.json(getPost)
-    } catch (error) {
-        res.json({ message: error })
-    }
-})
+    // router.get('/', async(req, res) => {
+    //     try {
+    //         const getPost = await Post.find()
+    //         res.json(getPost)
+    //     } catch (error) {
+    //         res.json({ message: error })
+    //     }
+    // })
 
 router.post('/post', async(req, res) => {
     const post = new Post({
